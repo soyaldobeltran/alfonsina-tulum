@@ -1,0 +1,164 @@
+---
+
+
+
+---
+<section class="flex flex-col gap-8 items-center">
+    <figure class="icon-cards mt-3 pt-16">
+        <div class="icon-cards__content">
+          <div class="icon-cards__item d-flex align-items-center justify-content-center">
+          </div>
+          <div class="icon-cards__item d-flex align-items-center justify-content-center"></div>
+          <div class="icon-cards__item d-flex align-items-center justify-content-center"></div>
+        </div>
+        
+    </figure>
+    <article class="p-16 max-w-screen-sm text-center text-[#71211A]">
+        <p>Alfonsina es un bistró lleno de ternura, cariño y conexión, donde hay opciones para todos. Desde comida gluten free y vegetariana, hasta panes artesanales. Este es un lugar para pasar el tiempo y dejar al tiempo pasar.</p>
+    </article>
+</section>
+
+<style>
+    .icon-cards {
+  position: relative;
+  width: 60vw;
+  height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  margin: 0;
+  perspective: 1000px;
+  transform-origin: center;
+}
+.icon-cards__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__content.step-animation {
+  -webkit-animation: carousel 8s infinite steps(1) forwards;
+          animation: carousel 8s infinite steps(1) forwards;
+}
+.icon-cards__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60vw;
+  height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  transform-origin: center;
+}
+.icon-cards__item:nth-child(1) {
+background: url('https://scontent.fisj3-3.fna.fbcdn.net/v/t39.30808-6/455810449_520631313824984_8300659543177344445_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=s_bcKHXaZhsQ7kNvgEmr6Sb&_nc_ht=scontent.fisj3-3.fna&oh=00_AYAz5TAXFwbb1e-IDNITUxXc-DNqdlSyUtJKSTE2qH5-ow&oe=66D28850') no-repeat center/cover;
+  transform: rotateY(0) translateZ(35vw);
+}
+.icon-cards__item:nth-child(2) {
+    background: url('https://scontent.fisj3-3.fna.fbcdn.net/v/t39.30808-6/406441011_1051624079412224_7126801029636303964_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-OAE5h4_shAQ7kNvgE9fX8l&_nc_ht=scontent.fisj3-3.fna&oh=00_AYAaayKmb_sREMy1FKe-3Rv2Fp4QOgQCfqKwJ8GSdQYedA&oe=66D2A994') no-repeat center/cover;
+  transform: rotateY(120deg) translateZ(35vw);
+}
+.icon-cards__item:nth-child(3) {
+    background: url('https://scontent.fisj3-3.fna.fbcdn.net/v/t39.30808-6/455635161_520631320491650_6466912100260085042_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xmK1IG_DobQQ7kNvgGPoybs&_nc_ht=scontent.fisj3-3.fna&oh=00_AYAQRdanZhVx_J5O-aXPNyMchrQjfh-nShMibyAeql290w&oe=66D2874C') no-repeat center/cover;
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@-webkit-keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%, 45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%, 72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%, 100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+@keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%, 45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%, 72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%, 100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@-webkit-keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+</style>
+<script>
+function classToggle() {
+  let el = document.querySelector('.icon-cards__content');
+  el.classList.toggle('step-animation');
+}
+
+document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+</script>
